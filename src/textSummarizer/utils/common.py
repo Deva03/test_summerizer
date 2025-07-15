@@ -35,7 +35,7 @@ def read_yaml(path_to_yaml: str) -> ConfigBox:
         raise e
 
 @ensure_annotations
-def create_directories(paths: List[str], verbose=True):
+def create_directories(paths: list[str], verbose=True):
     """
     Creates multiple directories if they do not exist.
 

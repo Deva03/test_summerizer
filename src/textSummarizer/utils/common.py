@@ -9,7 +9,7 @@ import yaml
 
 
 @ensure_annotations
-def read_yaml(path_to_yaml: str) -> ConfigBox:
+def read_yaml(path_to_yaml: Path) -> ConfigBox:
     """
     Reads a YAML file and returns the contents as a Python object.
 
@@ -35,7 +35,7 @@ def read_yaml(path_to_yaml: str) -> ConfigBox:
         raise e
 
 @ensure_annotations
-def create_directories(paths: list[str], verbose=True):
+def create_directories(paths: list, verbose=True):
     """
     Creates multiple directories if they do not exist.
 
@@ -50,7 +50,7 @@ def create_directories(paths: list[str], verbose=True):
 
     
 @ensure_annotations
-def get_file_size(path: str) -> str:
+def get_file_size(path: Path) -> str:
     """
     Returns the size of the file at the given path in kilobytes (KB).
 
